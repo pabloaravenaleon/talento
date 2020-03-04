@@ -1,0 +1,77 @@
+/**********************************************************************
+*	CONTENEDOR FLEXBOX: PADRE DE LOS <DIV> 
+**********************************************************************/
+.contenedor {
+    display: flex; 			/* CONTENEDOR FLEX: TODOS SUS HIJOS SERÁN ORDENADOS INLINE AUTOMÁTICAMENTE */
+    flex-direction: column; /* PERO INICIALMENTE NECESITAMOS QUE LOS HIJOS SE COMPORTEN COMO COLUMNA */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* APLICA UN TIPO DE FUENTE ESTÁNDAR */
+}
+
+/**********************************************************************
+*	CONFIGURACIÓN GENERAL/INICIAL PARA LOS 3 HIJOS 
+**********************************************************************/
+.hijo1, .hijo2, .hijo3 {
+    border: solid 1px red;    /* BORDE SÓLIDO DE 1px COLOR ROJO */
+    background-color: orange; /* FONDO ANARANJADO */
+    color: white;             /* COLOR DE LETRA BLANCO */
+    width: 100%;                /* LOS ELEMENTOS USARÁN EL 100% DEL ANCHO DISPONIBLE */
+    text-align: center;         /* CENTRA EL TEXTO EN LOS ELEMENTOS */
+    height: 100px;              /* AJUSTA EL ALTO DE LOS ELEMENTOS A 100px */
+}
+
+
+/**********************************************************************
+*	ESTILOS APLICADOS CUANDO LA PANTALLA MIDE ENTRE 400 Y 600 PIXELS 
+**********************************************************************/
+@media (min-width: 400px) and (max-width: 600px) {
+    .contenedor {
+        flex-direction: row; 	 /* EL CONTENEDOR FLEXBOX UBICA A SUS HIJOS EN LÍNEA*/
+        flex-wrap: wrap; 		 /* SI NO CABEN LOS HIJOS EN LA MISMA LÍNEA, LOS VA EMPUJANDO HACIA ABAJO, RESPETANDO SU ANCHO */
+        justify-content: center; /* EL CONTENEDOR UBICA A SUS HIJOS AL CENTRO */
+    }
+    .hijo1, .hijo2 {
+        width: 49.45%; 	/* AMBOS HIJOS AHORA CABEN EN UNA MISMA LÍNEA. EL TERCER HIJO SERÁ EMPUJADO GRACIAS AL flex-wrap */
+    }
+}
+
+/**********************************************************************
+*	ESTILOS APLICADOS CUANDO LA PANTALLA MIDE ENTRE 601 Y 800 PIXELS 
+**********************************************************************/
+@media (min-width: 601px) and (max-width: 800px) {
+    .contenedor {
+        flex-direction: column-reverse; /* EL CONTENEDOR FLEXBOX UBICA A SUS HIJOS EN COLUMNA EN ORDEN INVERSO */
+    }
+
+    .hijo1, .hijo2, .hijo3 {
+        width: 33%; /* TODOS LOS HIJOS MIDEN UN TERCIO DEL ESPACIO DISPONIBLE */
+    }
+
+    .hijo2 {
+        align-self: center; /* EL HIJO 2 SE UBICA A SÍ MISMO AL CENTRO */
+    }
+
+    .hijo3 {
+        align-self: flex-end; /* EL HIJO 3 SE UBICA A SÍ MISMO AL FINAL (DERECHA) DEL CONTENEDOR */
+    }
+}
+
+/**********************************************************************
+*	ESTILOS APLICADOS CUANDO LA PANTALLA MIDE 801 O MÁS PIXELS 
+**********************************************************************/
+@media (min-width: 801px) {
+    .contenedor {
+        flex-direction: column-reverse;/* EL CONTENEDOR FLEXBOX UBICA A SUS HIJOS EN COLUMNA EN ORDEN INVERSO */
+    }
+
+    .hijo1, .hijo2, .hijo3 {
+        width: 33%; /* TODOS LOS HIJOS MIDEN UN TERCIO DEL ESPACIO DISPONIBLE */
+    }
+
+    .hijo2 {
+        align-self: flex-end; /* EL HIJO 2 SE UBICA A SÍ MISMO AL FINAL (DERECHA) DEL CONTENEDOR */
+    }
+
+    .hijo3 {
+        display: none; /* EL HIJO 3 DESAPARECE */
+    }
+}

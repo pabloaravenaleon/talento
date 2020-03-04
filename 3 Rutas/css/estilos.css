@@ -1,0 +1,47 @@
+.fondo {
+    background-image: url("../imagenes/shiva.jpg");
+}
+
+#uno    { background-color: #FFEB3B; }
+#dos    { background-color: #9E9E9E; }
+#tres   { background-color: #FFCDD2; }
+#cuatro { background-color: #FF5252; }
+
+#uno, #dos, #tres, #cuatro {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: solid 1px #333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    
+}
+li {
+    display: inline;
+}
+
+.titulo {
+    font-size: 30px;
+}
+.texto {
+    display: inline-block;
+    width: 46%;
+}
+
+.imagen {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+}
+
+.visible {
+    border: solid 1px red;
+}

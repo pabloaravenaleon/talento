@@ -1,0 +1,38 @@
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+    background: #fff;
+    border: 10px solid #2c3e50;
+    margin: 20px;
+}
+
+.elemento {
+    color: #fff;
+    margin: 5px;
+    background: #e67e22;
+    text-align: center;
+    height: 50px;
+    flex-basis: 100px;
+    flex-grow: 0.5;
+    flex-shrink: 1;
+    order: 2;
+}
+
+.elemento2 {
+    flex-grow: 4;
+    flex-shrink: 2;
+    order: 1;
+}
+
+.elemento3 {
+    align-self: flex-end;
+}
+body {
+    background: #e9e9e9;
+}

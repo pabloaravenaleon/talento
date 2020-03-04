@@ -1,0 +1,38 @@
+.row1, .row2, .row3 {
+    display: flex; 
+    flex-direction: column;
+}
+
+.azul, .naranjo3, .naranjo4, .verde {
+    color: white;
+    border: solid 1px black;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+.azul { background-color: royalblue; }
+.naranjo3, .naranjo4 { background-color: orange; }
+.verde { background-color: seagreen; }
+
+@media (min-width: 400px) and (max-width:700px) {
+    .row1, .row3 {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 701px) {
+    .row1, .row3 {
+        flex-direction: row;
+    }
+    .row2 {
+        flex-direction: column;
+    }
+    .naranjo3 {
+        width: 75%;
+        align-self: center;
+    }
+    .naranjo4 {
+        width: 75%;
+        align-self: flex-end;
+    }
+}

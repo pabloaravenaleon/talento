@@ -1,0 +1,31 @@
+.hijo  {
+    color: slateblue;
+    background-color: orange;
+    font-size: 30px;
+    width: 200px;
+    border: solid 1px blue;
+    height: 100px;
+}
+
+.abajo { align-self: flex-end; }
+.arriba { align-self: flex-start; }
+.centro { align-self: center; }
+
+.contenedor {
+    border: dashed 5px orange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    align-items: center;
+    height: 300px;
+}
+
+/* .imagen {
+    border: dotted 5px red;
+    border-radius: 50%;
+    width: 500px;
+}
+
+.visible {
+    border: solid 1px black;
+} */

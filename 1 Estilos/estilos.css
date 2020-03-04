@@ -1,0 +1,30 @@
+.fotocv {
+    float: right;
+    width: 150px;
+    height: 100px;
+    margin-right: 200px;
+    border: solid 3px green;
+    border-radius: 20%;
+}
+
+body {
+    margin-left: 200px;
+}
+
+.contenedor {
+    border: solid 1px;
+    padding: 30px;
+}
+
+li {
+    color: red;
+}
+
+h2 {
+    color: blue;
+    font-size: 50px;
+}
+
+footer {
+    background-color: yellow;    
+}
